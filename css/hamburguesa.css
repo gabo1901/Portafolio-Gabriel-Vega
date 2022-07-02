@@ -1,0 +1,121 @@
+/* Reset menu hamburguesa */
+
+html { scroll-behavior: smooth; }
+label { cursor: pointer; }
+[type=radio], [type=checkbox] { display: none; }
+.wrap { max-width: 1440px; margin: 0 auto; }
+
+/* Label */
+
+.header nav{
+    height: 60px;
+    width: 80%;
+    position: absolute;
+    top: 0;
+}
+.menu .check{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translate(0,-50%);
+    z-index: 10;
+}
+
+
+/* Lineas menu */
+
+.menu .check span{
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    position: relative;
+    display: inline-block;
+    bottom: 90%;
+    transition: 0.8s;
+}
+
+.menu .check span::before{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    display: inline-block;
+    top: -10px;
+    left: 0;
+    transition: 1s;
+}
+
+.menu .check span::after{
+    content: '';
+    width: 30px;
+    height: 2px;
+    background: #ffffff;
+    position: absolute;
+    display: inline-block;
+    top: 10px;
+    left: 0;
+    transition: 1s;
+}
+
+/* Contenedor menu escondido */
+
+.menu .hide{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to left bottom, #000047, #000000,#000032 );
+    position: relative;
+    top: -35px;
+    left: -1080px;
+    z-index: 5;
+    transition: 1s;
+}
+
+/* Menu escondido */
+
+.menu .hide div{
+    position: relative;
+    left: 0;
+    top: 100px;
+    color: #ffffff;
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    font-weight: 100;
+    line-height: 70px;
+    text-align: center;
+}
+
+/* Check-box */
+
+#p_chk:checked ~ .hide{
+    left: -65px;
+}
+
+#p_chk:checked ~ .check span{
+    background: transparent;
+}
+#p_chk:checked ~ .check span::before{
+    top: 0;
+    transform: rotate(-135deg);
+    background: linear-gradient(to left top, #ff0000, #4400ff);
+}
+#p_chk:checked ~ .check span::after{
+    top: 0;
+    transform: rotate(135deg);
+    background: linear-gradient(to left top, #ff0000, #4400ff);
+}
+
+@media only screen and (min-width: 900px){
+    .menu .check{
+        display: none;
+    }
+    .menu .hide{
+        display: none;
+    }
+    
+    .menu .hide div{
+       display: none;
+    }
+}
+

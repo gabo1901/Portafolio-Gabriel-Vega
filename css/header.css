@@ -1,0 +1,345 @@
+body{ 
+    min-width: 390px;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    /* linear-gradient(to left top, #000047, #000000,#000032 ) */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+    cursor: none;
+}
+
+body::-webkit-scrollbar{
+    width: 10px;
+    background: #000000;
+}
+body::-webkit-scrollbar-thumb{
+    background: #3500c7;
+    border-radius: 50px;
+}
+
+/* Animaciones cursor */
+
+.above{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+}
+ 
+.above .header{
+    height: 90vh;
+    width: 95%;
+    position: relative;
+    border-radius: 30px;
+    box-shadow: 1px 0px 30px 0.50px #000c76;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left top, #000047, #000000,#000032);
+    animation: header-animation 1.5s ease-in-out;
+}
+
+/* Menu */
+
+.men{
+    color: #ffffff;
+    font-family:  'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    right: 100px;
+    top: 35px;
+    display: none;
+    animation: men-animation 1.5s ease-in-out;
+}
+
+.men p{
+    position: relative;
+    bottom: 12px;
+}
+
+.inicio{
+    height: 25px;
+    width: 70px;
+    text-align: center;
+    background: transparent;
+    border-radius: 5px;
+    transition: .4s;
+    /* cursor: pointer; */
+}
+
+.cv{
+    height: 25px;
+    width: 35px;
+    text-align: center;
+    background: transparent;
+    border-radius: 5px;
+    transition: .4s;
+    /* cursor: pointer; */
+} 
+
+.cont{
+    height: 25px;
+    width: 100px;
+    text-align: center;
+    background: transparent;
+    border-radius: 5px;
+    transition: .4s;
+    /* cursor: pointer; */
+}
+.ilus{
+    height: 25px;
+    width: 125px;
+    text-align: center;
+    background: transparent;
+    border-radius: 5px;
+    transition: .4s;
+    cursor: none;
+    color: #ffffff;
+    position: absolute;
+}
+
+/* Hover menu */
+
+.inicio:hover, .cv:hover, .cont:hover, .ilus:hover{
+    background: #4400ff;
+}
+
+/* Logo */
+
+.logo img{
+    height: 70px;
+    width: auto;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    animation: logo-animation 1.5s ease-in-out;
+}
+
+/* Avatar */
+
+.avatar{
+    height: 320px;
+    width: 250px;
+    position: relative;
+    bottom: 15%;
+    border-image: linear-gradient(to left top, #ff0000, #4400ff) 1;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    top: 30px;
+    animation: avatardos-animation 1.5s ease-in-out, avatar-animation 3s infinite ease-in-out;
+}
+
+
+.muneco{
+    height: 300px;
+    width: auto;
+    position: relative;
+    top: 20px;
+    right: 25px;
+}
+
+/* Titulos h2 h3 */
+
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 1.5rem;
+    color: #ffffff;
+    position: relative;
+    text-align: start;
+    animation: h2-animation 1.5s ease-in-out;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 0.77rem;
+    color: #ffffff;
+    position: relative;
+    text-align: start;
+    animation: h3-animation 1.5s ease-in-out;
+}
+
+/* CTA */
+
+button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 1rem;
+    color: #ffffff;
+    position: relative;
+    background: #4400ff;
+    border: none;
+    border-radius: 10px;
+    height: 35px;
+    top: 10px;
+    left: 0;
+    width: 150px;
+    cursor: none;
+    transition: 0.8s ease;
+    animation: button-animation 1.5s ease-in-out;
+}
+
+/* Hover CTA */
+
+button:hover{
+    background: #45040c;
+}
+
+/* Media querys */
+
+@media only screen and (min-width: 800px){
+    h2{ 
+        font-size: 2.2rem;
+        position: absolute;
+        right: 60%;
+        top: 100px;  
+    }
+    h3{
+        font-size: 1.1rem;
+        position: absolute;
+        top: 175px;
+        right: 62%; 
+    }
+    button{
+        font-size: 1rem;
+        position: absolute;
+        left: 18%;
+        top: 50%;
+    }
+    .avatar{
+        position: absolute;
+        top: 20%;
+        right: 100px;
+        height: 420px;
+        width: 300px;
+    }
+    .muneco{
+        height: 400px;
+        width: auto;
+        position: relative;
+        top: 20px;
+        right: 40px;
+    }
+    .logo{
+        font-size: 0.7rem;
+        line-height: 25px;
+        position: absolute;
+        left: 0px;
+        top: 20px;
+    } 
+    .men{
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+    .cursor{
+        display: block;
+    }
+
+}
+
+/* Animaciones */
+
+/* Animacion marco de avatar */
+
+@keyframes avatar-animation {
+    0%{border-image: linear-gradient(to left top, #ff0000, #4400ff) 1;}
+    25%{border-image: linear-gradient(to left bottom, #ff0000, #4400ff) 1;}
+    50%{border-image: linear-gradient(to right bottom, #ff0000, #4400ff) 1;}
+    75%{border-image: linear-gradient(to right top, #ff0000, #4400ff) 1;}
+    100%{border-image: linear-gradient(to left top, #ff0000, #4400ff) 1;}
+}
+
+/* Animacion menu */
+
+@keyframes men-animation{
+    0%{
+        transform:translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+/* Animacion logo */
+
+@keyframes logo-animation {
+    0%{
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+} 
+
+/* Animacion avatar Dos */
+
+@keyframes avatardos-animation {
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+} 
+
+/* Animacion h2 */
+
+@keyframes h2-animation {
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+/* Animacion h3 */
+
+@keyframes h3-animation {
+    0%{
+        transform: translate(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+
+/* Animacion button */
+
+@keyframes button-animation {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
